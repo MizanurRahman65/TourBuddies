@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    
+    block head
+      //-meta(http-equiv='Content-Security-Policy' content="default-src https://js.stripe.com/v3/; style-src  'unsafe-inline'; script-src https://js.stripe.com/v3/ 'unsafe-inline' 'unsafe-eval';")
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      //-meta(http-equiv='Content-Security-Policy' content="default-src https://js.stripe.com/v3/; style-src  'unsafe-inline'; script-src https://js.stripe.com/v3/ 'unsafe-inline' 'unsafe-eval';")
+      title TourBuddies | #{title}
+
+  body(data-alert=`${alert ? alert : ''}`)
+    // HEADER
+    include _header
+
+    // CONTENT
+    block content
+
+    block signup
+      
+
+    // FOOTER
+    include _footer
+
+   
+    
+    
+    //- script(src='self' 'https://js.stripe.com/v3/')
+    //-meta(http-equiv='Content-Security-Policy' content="default-src https://js.stripe.com/v3/")
+    script(src='https://js.stripe.com/v3/' 'unsafe-inline' 'unsafe-eval')
+    script(src='/js/bundle.js')
+    //-script(src='https://js.stripe.com/v3/' 'unsafe-inline' 'unsafe-eval')
+    //-meta(http-equiv='Content-Security-Policy' content="default-src https://js.stripe.com/v3/; style-src href='https://fonts.googleapis.com/css?family=Lato:300,300i,700 'unsafe-inline'; script-src https://js.stripe.com/v3/ 'unsafe-inline' 'unsafe-eval';")
